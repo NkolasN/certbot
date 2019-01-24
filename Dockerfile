@@ -7,7 +7,7 @@ RUN apk add --update python python-dev py-pip \
     augeas-dev openssl-dev libffi-dev ca-certificates dialog \
     && rm -rf /var/cache/apk/*
 
-ENV CERTBOT_VERSION 0.8.1
+ENV CERTBOT_VERSION 0.30.0
 
 RUN pip install -U certbot==$CERTBOT_VERSION
 
