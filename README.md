@@ -24,11 +24,11 @@ $ docker run --rm -it \
     --net=<your-network-name> \
     adop/certbot:VERSION <command>
 ```
-Where ```command``` is ```certbot``` command.
+Where ```command``` is certbot's ```certonly``` as the cerbot command is the Docker image entrypoint.
 
 Example:
 ```
-certbot certonly --standalone -d ${DOMAIN_NAME} --text --register-unsafely-without-email --agree-tos"
+"certonly --standalone -d ${DOMAIN_NAME} --text --register-unsafely-without-email --agree-tos"
 ```
 
 after the above, the Certbot will request SSL certificates for the ```$DOMAIN_NAME``` and save it to ```<store-path>```.
